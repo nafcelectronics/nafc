@@ -1,4 +1,4 @@
-html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -256,12 +256,14 @@ html<!DOCTYPE html>
         .instagram { background-color: var(--instagram-color); }
         .gmail { background-color: var(--gmail-color); }
 
+        /* DISEÑO DE LOS DATOS VISIBLES EN PANTALLA */
         .contact-text {
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: bold;
             color: var(--text-light);
             letter-spacing: 0.5px;
-            margin-top: 0.2rem;
+            margin-top: 0.4rem;
+            text-align: center;
         }
 
         footer {
@@ -291,7 +293,6 @@ html<!DOCTYPE html>
 
     <header>
         <div class="brand">
-            <!-- FOTO 1: TU LOGO EN LA ESQUINA SUPERIOR -->
             <img src="foto1.png" alt="NAFC Electronics Logo" class="logo-img">
             <span class="brand-name">NAFC ELECTRONICS</span>
         </div>
@@ -305,9 +306,9 @@ html<!DOCTYPE html>
     </header>
 
     <main>
-        <!-- TEXTO 1: PRESENTACIÓN DE LA EMPRESA (IZQUIERDA) -->
         <section class="hero" id="inicio">
-            <h1>En NAFC Electronics no creamos soluciones genéricas;<br><span>desarrollamos la electrónica exacta.</span></h1>
+            <h1>No creamos soluciones genéricas;<br><span>desarrollamos la electrónica exacta.</span></h1>
+            <br>
             <p>En NAFC Electronics no creamos soluciones genéricas; desarrollamos la electrónica exacta que tu negocio necesita para automatizar, optimizar y crecer. Transformamos ideas complejas en hardware real, robusto y eficiente. Somos una empresa de ingeniería electrónica especializada en el diseño, prototipado y fabricación de placas de circuito impreso (PCB) a la medida para la pequeña y mediana industria.</p>
         </section>
 
@@ -315,7 +316,6 @@ html<!DOCTYPE html>
             <h2 class="section-title">Nuestros Pilares y Servicios</h2>
             <div class="services-grid">
                 
-                <!-- REPLICADO DEL TEXTO 1 PARA MANTENER LA ARMONÍA VISUAL CON LA FOTO 2 -->
                 <div class="card">
                     <img src="foto2.png" alt="Filosofía NAFC Electronics" class="card-img">
                     <div class="card-content">
@@ -324,7 +324,6 @@ html<!DOCTYPE html>
                     </div>
                 </div>
 
-                <!-- TEXTO 2: SERVICIOS ESPECIALIZADOS (CENTRO - FOTO 3) -->
                 <div class="card">
                     <img src="foto3.png" alt="Servicios de Ingeniería" class="card-img">
                     <div class="card-content">
@@ -337,7 +336,6 @@ html<!DOCTYPE html>
                     </div>
                 </div>
 
-                <!-- TEXTO 3: HONESTIDAD E INGENIERÍA REAL (DERECHA - FOTO 4) -->
                 <div class="card">
                     <img src="foto4.png" alt="Honestidad e Ingeniería Real" class="card-img">
                     <div class="card-content">
@@ -353,7 +351,6 @@ html<!DOCTYPE html>
             </div>
         </section>
 
-        <!-- SECCIÓN DE CONTACTO REESTRUCTURADA CON ENLACES CONFIGURADOS Y TEXTOS IMPRESOS -->
         <section class="contact-section" id="contacto">
             <h2 class="section-title">Canales de Contacto Directo</h2>
             <div class="contact-info">
@@ -363,19 +360,19 @@ html<!DOCTYPE html>
 
             <div class="social-grid">
                 
-                <!-- WHATSAPP CON OPCIÓN DE CLIC REPARADA Y NÚMERO ESCRITO ABAJO -->
+                <!-- WHATSAPP: ENLACE ABSOLUTO + NÚMERO LOCAL VISIBLE ABAJO -->
                 <div class="social-item">
-                    <a href="wa.me" target="_blank" rel="noopener noreferrer" class="btn-social whatsapp">WhatsApp</a>
-                    <div class="contact-text">6490-9693</div>
+                    <a href="whatsapp.com" target="_blank" rel="noopener noreferrer" class="btn-social whatsapp">WhatsApp</a>
+                    <div class="contact-text">64909693</div>
                 </div>
 
-                <!-- INSTAGRAM CON OPCIÓN DE CLIC REPARADA Y USUARIO ESCRITO ABAJO -->
+                <!-- INSTAGRAM: ENLACE ABSOLUTO + USUARIO VISIBLE ABAJO -->
                 <div class="social-item">
                     <a href="instagram.com" target="_blank" rel="noopener noreferrer" class="btn-social instagram">Instagram</a>
-                    <div class="contact-text">@nafcelectronics</div>
+                    <div class="contact-text">nafcelectronics</div>
                 </div>
 
-                <!-- CORREO CON OPCIÓN DE CLIC Y DIRECCIÓN ESCRITA ABAJO -->
+                <!-- CORREO: ENLACE ABSOLUTO + DIRECCIÓN VISIBLE ABAJO -->
                 <div class="social-item">
                     <a href="mailto:nafcelectronics@gmail.com" class="btn-social gmail">Correo</a>
                     <div class="contact-text">nafcelectronics@gmail.com</div>
