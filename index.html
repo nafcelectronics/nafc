@@ -211,6 +211,24 @@
             font-size: 1.1rem;
         }
 
+        /* DISEÑO PARA TU BARRA DE TELÉFONO INTERNACIONAL VISIBLE */
+        .phone-display {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            background-color: var(--bg-card);
+            display: inline-block;
+            padding: 0.8rem 2.5rem;
+            border-radius: 50px;
+            border: 1px solid #334155;
+            letter-spacing: 0.5px;
+        }
+
+        .phone-display span {
+            color: var(--blue-electric);
+        }
+
         .social-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -256,7 +274,6 @@
         .instagram { background-color: var(--instagram-color); }
         .gmail { background-color: var(--gmail-color); }
 
-        /* DISEÑO DE LOS DATOS VISIBLES EN PANTALLA */
         .contact-text {
             font-size: 1.1rem;
             font-weight: bold;
@@ -358,21 +375,26 @@
                 <p>Escríbenos directamente o copia nuestros datos comerciales de soporte sin intermediarios.</p>
             </div>
 
+            <!-- RESTAURADA LA BARRA CON PREFIJO INTERNACIONAL PARA CLIENTES EXTRANJEROS -->
+            <div class="phone-display">
+                📞 Teléfono de Contacto: <span>+507 6490-9693</span>
+            </div>
+
             <div class="social-grid">
                 
-                <!-- WHATSAPP: ENLACE ABSOLUTO + NÚMERO LOCAL VISIBLE ABAJO -->
+                <!-- WHATSAPP CORREGIDO CON URL PROFESIONAL ESTRICTA DE META -->
                 <div class="social-item">
-                    <a href="whatsapp.com" target="_blank" rel="noopener noreferrer" class="btn-social whatsapp">WhatsApp</a>
+                    <a href="wa.me" target="_blank" rel="noopener noreferrer" class="btn-social whatsapp">WhatsApp</a>
                     <div class="contact-text">64909693</div>
                 </div>
 
-                <!-- INSTAGRAM: ENLACE ABSOLUTO + USUARIO VISIBLE ABAJO -->
+                <!-- INSTAGRAM CORREGIDO CON URL PROFESIONAL COMPLETA DE RED -->
                 <div class="social-item">
                     <a href="instagram.com" target="_blank" rel="noopener noreferrer" class="btn-social instagram">Instagram</a>
                     <div class="contact-text">nafcelectronics</div>
                 </div>
 
-                <!-- CORREO: ENLACE ABSOLUTO + DIRECCIÓN VISIBLE ABAJO -->
+                <!-- CORREO ELECTRÓNICO -->
                 <div class="social-item">
                     <a href="mailto:nafcelectronics@gmail.com" class="btn-social gmail">Correo</a>
                     <div class="contact-text">nafcelectronics@gmail.com</div>
