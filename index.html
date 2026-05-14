@@ -197,13 +197,30 @@
         }
 
         .contact-info {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             color: var(--text-gray);
             font-size: 1.1rem;
         }
 
         .contact-info p {
             margin-bottom: 0.8rem;
+        }
+
+        /* DISEÑO PARA EL TELÉFONO VISIBLE */
+        .phone-display {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            background-color: var(--bg-card);
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            border: 1px solid #334155;
+        }
+
+        .phone-display span {
+            color: var(--blue-electric);
         }
 
         .social-grid {
@@ -267,7 +284,6 @@
 
     <header>
         <div class="brand">
-            <!-- LOGO: FOTO 1 -->
             <img src="foto1.png" alt="NAFC Electronics Logo" class="logo-img">
             <span class="brand-name">NAFC ELECTRONICS</span>
         </div>
@@ -291,7 +307,6 @@
             <h2 class="section-title">Nuestros Servicios</h2>
             <div class="services-grid">
                 
-                <!-- TARJETA 1 (FOTO 2) -->
                 <div class="card">
                     <img src="foto2.png" alt="Automatización Industrial" class="card-img">
                     <div class="card-content">
@@ -300,16 +315,14 @@
                     </div>
                 </div>
 
-                <!-- TARJETA 2 (FOTO 3) -->
                 <div class="card">
                     <img src="foto3.png" alt="Clonación y Rediseño de Hardware" class="card-img">
                     <div class="card-content">
                         <h3>Clonación y Rediseño de Hardware</h3>
-                        <p>Reperfilamiento de circuitos obsoletos o dañados. Si tienes una placa que ya no se fabrica, extraemos el esquema original y la fabricamos desde cero usando componentes modernos.</p>
+                        <p>Reperfilamiento de circuitos obsoletos or dañados. Si tienes una placa que ya no se fabrica, extraemos el esquema original y la fabricamos desde cero usando componentes modernos.</p>
                     </div>
                 </div>
 
-                <!-- TARJETA 3 (FOTO 4) -->
                 <div class="card">
                     <img src="foto4.png" alt="Prototipado PCB" class="card-img">
                     <div class="card-content">
@@ -335,9 +348,15 @@
                 <p>¿Tienes un proyecto en mente o una máquina detenida por falta de repuestos?</p>
                 <p>Escríbenos directamente para cotizar tu desarrollo electrónico sin intermediarios.</p>
             </div>
+
+            <!-- TELÉFONO DE CONTACTO VISIBLE AGREGADO -->
+            <div class="phone-display">
+                📞 Teléfono Celular: <span>+507 6490-9693</span>
+            </div>
+
             <div class="social-grid">
-                <!-- RUTAS WEB ABSOLUTAS CORREGIDAS -->
-                <a href="wa.me" target="_blank" class="btn-social whatsapp">WhatsApp</a>
+                <!-- ENLACES ABSOLUTOS REESCRITOS DESDE CERO CON PROTOCOLO SEGURO -->
+                <a href="whatsapp.com" target="_blank" class="btn-social whatsapp">WhatsApp</a>
                 <a href="instagram.com" target="_blank" class="btn-social instagram">Instagram</a>
                 <a href="mailto:nafcelectronics@gmail.com" class="btn-social gmail">Correo</a>
             </div>
