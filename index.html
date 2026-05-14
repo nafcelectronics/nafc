@@ -98,10 +98,12 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--text-gray);
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
+            text-align: justify;
+            text-justify: inter-word;
         }
 
         .section-title {
@@ -159,34 +161,46 @@
 
         .card h3 {
             color: var(--blue-electric);
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-bottom: 1rem;
         }
 
         .card p {
             color: var(--text-gray);
             font-size: 0.95rem;
+            text-align: justify;
         }
 
         .differentiation {
             background-color: #1e293b;
             padding: 5rem 2rem;
-            text-align: center;
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto 0 auto;
         }
 
         .diff-box {
-            max-width: 800px;
-            margin: 2rem auto 0 auto;
             border-left: 4px solid var(--blue-electric);
-            padding: 1rem 2rem;
+            padding: 1.5rem;
             background-color: #0f172a;
-            text-align: left;
+            border-radius: 0 8px 8px 0;
         }
 
         .diff-box h3 {
             color: var(--blue-electric);
             margin-bottom: 0.5rem;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+        }
+
+        .diff-box p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            text-align: justify;
         }
 
         .contact-section {
@@ -283,6 +297,7 @@
 
     <header>
         <div class="brand">
+            <!-- FOTO 1: TU LOGOTIPO DE LA EMPRESA -->
             <img src="foto1.png" alt="NAFC Electronics Logo" class="logo-img">
             <span class="brand-name">NAFC ELECTRONICS</span>
         </div>
@@ -290,54 +305,75 @@
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#diferencia">Diferencia</a></li>
+                <li><a href="#garantia">Garantía</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- TEXTO 1: PRESENTACIÓN PRINCIPAL ( HERO ) -->
         <section class="hero" id="inicio">
-            <h1>No creamos soluciones genéricas;<br><span>desarrollamos la electrónica exacta.</span></h1>
-            <p>Transformamos ideas complejas en hardware real, robusto y eficiente. Somos una empresa emergente de ingeniería electrónica especializada en el diseño, prototipado y fabricación de placas de circuito impreso (PCB) a la medida para la pequeña y mediana industria.</p>
+            <h1>En NAFC Electronics no creamos soluciones genéricas;<br><span>desarrollamos la electrónica exacta.</span></h1>
+            <br>
+            <p>En NAFC Electronics no creamos soluciones genéricas; desarrollamos la electrónica exacta que tu negocio necesita para automatizar, optimizar y crecer. Transformamos ideas complejas en hardware real, robusto y eficiente. Somos una empresa de ingeniería electrónica especializada en el diseño, prototipado y fabricación de placas de circuito impreso (PCB) a la medida para la pequeña y mediana industria.</p>
         </section>
 
+        <!-- TEXTO 2: CATÁLOGO DE SERVICIOS EN TRES COLUMNAS (FOTO 2, 3 Y 4) -->
         <section class="services" id="servicios">
-            <h2 class="section-title">Nuestros Servicios</h2>
+            <h2 class="section-title">Nuestros Servicios Industriales</h2>
             <div class="services-grid">
                 
+                <!-- FOTO 2: IZQUIERDA -->
                 <div class="card">
-                    <img src="foto2.png" alt="Automatización Industrial" class="card-img">
+                    <img src="foto2.png" alt="Fabricación Integral" class="card-img">
                     <div class="card-content">
-                        <h3>Diseño y Fabricación Integral</h3>
-                        <p>De la idea a la placa. Automatizamos desde una máquina hasta líneas de producción completas a pequeña escala. Diseñamos hardware para el control de motores industriales con sus respectivas etapas de potencia.</p>
+                        <h3>Fabricación Integral (De la Idea a la Placa)</h3>
+                        <p>Automatizamos desde una máquina hasta líneas de producción completas a pequeña escala. Diseñamos hardware para el control de 1, 2, 3 o 4 motores (CNC o industriales) con sus respectivas etapas de potencia aisladas.</p>
                     </div>
                 </div>
 
+                <!-- FOTO 3: CENTRO -->
                 <div class="card">
-                    <img src="foto3.png" alt="Clonación y Rediseño de Hardware" class="card-img">
+                    <img src="foto3.png" alt="Servicio Exclusivo de Diseño" class="card-img">
                     <div class="card-content">
-                        <h3>Clonación y Rediseño de Hardware</h3>
-                        <p>Reperfilamiento de circuitos obsoletos o dañados. Si tienes una placa que ya no se fabrica, extraemos el esquema original y la fabricamos desde cero usando componentes modernos.</p>
+                        <h3>Servicio Exclusivo de Diseño Técnico</h3>
+                        <p>Si ya tienes una idea pero necesitas el diagrama técnico y el diseño de la PCB (archivos Gerber), desarrollamos solo la ingeniería y te cobramos únicamente por el diseño final.</p>
                     </div>
                 </div>
 
+                <!-- FOTO 4: DERECHA -->
                 <div class="card">
-                    <img src="foto4.png" alt="Prototipado PCB" class="card-img">
+                    <img src="foto4.png" alt="Hardware IoT" class="card-img">
                     <div class="card-content">
-                        <h3>Desarrollo de Prototipos Rápidos</h3>
-                        <p>Placas de prueba listas para validación de mercado. Diseñamos PCB optimizados minimizando ruidos electromagnéticos y asegurando un ensamblaje industrial limpio.</p>
+                        <h3>Hardware IoT e Industria 4.0</h3>
+                        <p>Conectamos tus equipos a Internet. Desarrollamos fuentes inteligentes y módulos de control basados en microcontroladores avanzados para que puedas monitorear telemetría, recibir alertas y operar tus máquinas en tiempo real desde tu teléfono móvil en cualquier parte del mundo.</p>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <section class="differentiation" id="diferencia">
-            <h2 class="section-title">Nuestra Diferencia</h2>
-            <div class="diff-box">
-                <h3>Ingeniería Con Sentido Comercial</h3>
-                <p>No solo soldamos componentes. Entendemos el costo operativo y de producción de tu negocio para entregarte un producto que sea económicamente viable y fácil de reparar en el futuro.</p>
+        <!-- TEXTO 3: HONESTIDAD E INGENIERÍA REAL (BLOQUES DE DIFERENCIACIÓN) -->
+        <section class="differentiation" id="garantia">
+            <h2 class="section-title">Honestidad e Ingeniería Real</h2>
+            <div class="diff-grid">
+                
+                <div class="diff-box">
+                    <h3>Potencia 100% Real</h3>
+                    <p>Si diseñamos una fuente de poder de 24V a 10A, garantizamos componentes originales que entregan 10 amperios reales y estables, sin caídas de tensión ni sobrecalentamientos.</p>
+                </div>
+
+                <div class="diff-box">
+                    <h3>Componentes Originales</h3>
+                    <p>Trabajamos exclusivamente con referencias de fabricantes certificados, asegurando la máxima durabilidad en entornos industriales duros y hostiles.</p>
+                </div>
+
+                <div class="diff-box">
+                    <h3>Sistemas de Seguridad Integrados</h3>
+                    <p>Cada placa cuenta con aislamiento eléctrico avanzado (optoacopladores) y protección estricta contra cortocircuitos, sobrevoltajes y ruido electromagnético.</p>
+                </div>
+
             </div>
         </section>
 
@@ -345,17 +381,18 @@
             <h2 class="section-title">Contacto Directo</h2>
             <div class="contact-info">
                 <p>¿Tienes un proyecto en mente o una máquina detenida por falta de repuestos?</p>
-                <p>Escríbenos directamente para cotizar tu desarrollo electrónico sin intermediarios.</p>
+                <p>Comunícate directamente con nuestros ingenieros en Juan Díaz, Ciudad de Panamá.</p>
             </div>
 
+            <!-- TU TELÉFONO VISIBLE -->
             <div class="phone-display">
-                Locación: Juan Díaz, Ciudad de Panamá
+                📞 Celular Comercial: <span>+507 6490-9693</span>
             </div>
 
             <div class="social-grid">
-                <!-- ENLACES REALES E INTERNACIONALES VERIFICADOS -->
-                <a href="wa.me" target="_blank" class="btn-social whatsapp">WhatsApp</a>
-                <a href="instagram.com" target="_blank" class="btn-social instagram">Instagram</a>
+                <!-- ENLACES ABSOLUTOS REFORZADOS DE SEGURIDAD NATIVA DE RED -->
+                <a href="wa.me" target="_blank" rel="noopener noreferrer" class="btn-social whatsapp">WhatsApp</a>
+                <a href="instagram.com" target="_blank" rel="noopener noreferrer" class="btn-social instagram">Instagram</a>
                 <a href="mailto:nafcelectronics@gmail.com" class="btn-social gmail">Correo</a>
             </div>
         </section>
