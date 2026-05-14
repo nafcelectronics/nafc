@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -98,12 +98,11 @@
         }
 
         .hero p {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: var(--text-gray);
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
             text-align: justify;
-            text-justify: inter-word;
         }
 
         .section-title {
@@ -131,7 +130,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
         }
 
@@ -141,6 +140,8 @@
             border-radius: 12px;
             overflow: hidden;
             transition: transform 0.3s, border-color 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -157,99 +158,84 @@
 
         .card-content {
             padding: 2rem;
+            flex-grow: 1;
         }
 
         .card h3 {
             color: var(--blue-electric);
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             margin-bottom: 1rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 0.5rem;
         }
 
         .card p {
             color: var(--text-gray);
             font-size: 0.95rem;
+            margin-bottom: 1rem;
             text-align: justify;
         }
 
-        .differentiation {
-            background-color: #1e293b;
-            padding: 5rem 2rem;
+        .card ul {
+            list-style: none;
+            padding-left: 0;
         }
 
-        .diff-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 2rem auto 0 auto;
-        }
-
-        .diff-box {
-            border-left: 4px solid var(--blue-electric);
-            padding: 1.5rem;
-            background-color: #0f172a;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .diff-box h3 {
-            color: var(--blue-electric);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .diff-box p {
+        .card ul li {
             color: var(--text-gray);
             font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.2rem;
             text-align: justify;
+        }
+
+        .card ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--blue-electric);
+            font-weight: bold;
         }
 
         .contact-section {
-            max-width: 800px;
+            max-width: 900px;
             margin: 6rem auto;
             padding: 0 2rem;
             text-align: center;
         }
 
         .contact-info {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             color: var(--text-gray);
             font-size: 1.1rem;
         }
 
-        .contact-info p {
-            margin-bottom: 0.8rem;
-        }
-
-        .phone-display {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--text-light);
-            margin-bottom: 2.5rem;
-            background-color: var(--bg-card);
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            border: 1px solid #334155;
-        }
-
-        .phone-display span {
-            color: var(--blue-electric);
-        }
-
         .social-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.5rem;
-            max-width: 600px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            max-width: 850px;
             margin: 0 auto;
+        }
+
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
         }
 
         .btn-social {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 1rem;
+            width: 100%;
+            padding: 0.9rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
@@ -269,6 +255,14 @@
         .whatsapp { background-color: var(--whatsapp-color); }
         .instagram { background-color: var(--instagram-color); }
         .gmail { background-color: var(--gmail-color); }
+
+        .contact-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            letter-spacing: 0.5px;
+            margin-top: 0.2rem;
+        }
 
         footer {
             text-align: center;
@@ -297,109 +291,102 @@
 
     <header>
         <div class="brand">
-            <!-- FOTO 1: TU LOGOTIPO DE LA EMPRESA -->
+            <!-- FOTO 1: TU LOGO EN LA ESQUINA SUPERIOR -->
             <img src="foto1.png" alt="NAFC Electronics Logo" class="logo-img">
             <span class="brand-name">NAFC ELECTRONICS</span>
         </div>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#garantia">Garantía</a></li>
+                <li><a href="#servicios">Nuestra Ingeniería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- TEXTO 1: PRESENTACIÓN PRINCIPAL ( HERO ) -->
+        <!-- TEXTO 1: PRESENTACIÓN DE LA EMPRESA (IZQUIERDA) -->
         <section class="hero" id="inicio">
             <h1>En NAFC Electronics no creamos soluciones genéricas;<br><span>desarrollamos la electrónica exacta.</span></h1>
-            <br>
             <p>En NAFC Electronics no creamos soluciones genéricas; desarrollamos la electrónica exacta que tu negocio necesita para automatizar, optimizar y crecer. Transformamos ideas complejas en hardware real, robusto y eficiente. Somos una empresa de ingeniería electrónica especializada en el diseño, prototipado y fabricación de placas de circuito impreso (PCB) a la medida para la pequeña y mediana industria.</p>
         </section>
 
-        <!-- TEXTO 2: CATÁLOGO DE SERVICIOS EN TRES COLUMNAS (FOTO 2, 3 Y 4) -->
         <section class="services" id="servicios">
-            <h2 class="section-title">Nuestros Servicios Industriales</h2>
+            <h2 class="section-title">Nuestros Pilares y Servicios</h2>
             <div class="services-grid">
                 
-                <!-- FOTO 2: IZQUIERDA -->
+                <!-- REPLICADO DEL TEXTO 1 PARA MANTENER LA ARMONÍA VISUAL CON LA FOTO 2 -->
                 <div class="card">
-                    <img src="foto2.png" alt="Fabricación Integral" class="card-img">
+                    <img src="foto2.png" alt="Filosofía NAFC Electronics" class="card-img">
                     <div class="card-content">
-                        <h3>Fabricación Integral (De la Idea a la Placa)</h3>
-                        <p>Automatizamos desde una máquina hasta líneas de producción completas a pequeña escala. Diseñamos hardware para el control de 1, 2, 3 o 4 motores (CNC o industriales) con sus respectivas etapas de potencia aisladas.</p>
+                        <h3>Electrónica a la Medida</h3>
+                        <p>Desarrollamos la ingeniería exacta que tu negocio necesita para automatizar, optimizar y crecer. Transformamos ideas complejas en hardware real, robusto y eficiente mediante placas de circuito impreso (PCB) personalizadas.</p>
                     </div>
                 </div>
 
-                <!-- FOTO 3: CENTRO -->
+                <!-- TEXTO 2: SERVICIOS ESPECIALIZADOS (CENTRO - FOTO 3) -->
                 <div class="card">
-                    <img src="foto3.png" alt="Servicio Exclusivo de Diseño" class="card-img">
+                    <img src="foto3.png" alt="Servicios de Ingeniería" class="card-img">
                     <div class="card-content">
-                        <h3>Servicio Exclusivo de Diseño Técnico</h3>
-                        <p>Si ya tienes una idea pero necesitas el diagrama técnico y el diseño de la PCB (archivos Gerber), desarrollamos solo la ingeniería y te cobramos únicamente por el diseño final.</p>
+                        <h3>Servicios Especializados</h3>
+                        <ul>
+                            <li><strong>Fabricación Integral (De la Idea a la Placa):</strong> Automatizamos desde una máquina hasta líneas de producción completas a pequeña escala. Diseñamos hardware para el control de 1, 2, 3 o 4 motores (CNC o industriales) con sus respectivas etapas de potencia aisladas.</li>
+                            <li><strong>Servicio Exclusivo de Diseño:</strong> Si ya tienes una idea pero necesitas el diagrama técnico y el diseño de la PCB (archivos Gerber), desarrollamos solo la ingeniería y te cobramos únicamente por el diseño.</li>
+                            <li><strong>Hardware IoT e Industria 4.0:</strong> Conectamos tus equipos a Internet. Desarrollamos fuentes inteligentes y módulos de control basados en microcontroladores avanzados para que puedas monitorear telemetría, recibir alertas y operar tus máquinas en tiempo real desde tu teléfono móvil en cualquier parte del mundo.</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- FOTO 4: DERECHA -->
+                <!-- TEXTO 3: HONESTIDAD E INGENIERÍA REAL (DERECHA - FOTO 4) -->
                 <div class="card">
-                    <img src="foto4.png" alt="Hardware IoT" class="card-img">
+                    <img src="foto4.png" alt="Honestidad e Ingeniería Real" class="card-img">
                     <div class="card-content">
-                        <h3>Hardware IoT e Industria 4.0</h3>
-                        <p>Conectamos tus equipos a Internet. Desarrollamos fuentes inteligentes y módulos de control basados en microcontroladores avanzados para que puedas monitorear telemetría, recibir alertas y operar tus máquinas en tiempo real desde tu teléfono móvil en cualquier parte del mundo.</p>
+                        <h3>Honestidad e Ingeniería Real</h3>
+                        <ul>
+                            <li><strong>Potencia 100% Real:</strong> Si diseñamos una fuente de poder de 24V a 10A, garantizamos componentes originales que entregan 10 amperios reales y estables, sin caídas de tensión ni sobrecalentamientos.</li>
+                            <li><strong>Componentes Originales:</strong> Trabajamos exclusivamente con referencias de fabricantes certificados, asegurando la máxima durabilidad en entornos industriales duros.</li>
+                            <li><strong>Sistemas de Seguridad Integrados:</strong> Cada placa cuenta con aislamiento eléctrico (optoacopladores), protección contra cortocircuitos, sobrevoltajes y ruido electromagnético.</li>
+                        </ul>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- TEXTO 3: HONESTIDAD E INGENIERÍA REAL (BLOQUES DE DIFERENCIACIÓN) -->
-        <section class="differentiation" id="garantia">
-            <h2 class="section-title">Honestidad e Ingeniería Real</h2>
-            <div class="diff-grid">
-                
-                <div class="diff-box">
-                    <h3>Potencia 100% Real</h3>
-                    <p>Si diseñamos una fuente de poder de 24V a 10A, garantizamos componentes originales que entregan 10 amperios reales y estables, sin caídas de tensión ni sobrecalentamientos.</p>
-                </div>
-
-                <div class="diff-box">
-                    <h3>Componentes Originales</h3>
-                    <p>Trabajamos exclusivamente con referencias de fabricantes certificados, asegurando la máxima durabilidad en entornos industriales duros y hostiles.</p>
-                </div>
-
-                <div class="diff-box">
-                    <h3>Sistemas de Seguridad Integrados</h3>
-                    <p>Cada placa cuenta con aislamiento eléctrico avanzado (optoacopladores) y protección estricta contra cortocircuitos, sobrevoltajes y ruido electromagnético.</p>
-                </div>
-
-            </div>
-        </section>
-
+        <!-- SECCIÓN DE CONTACTO REESTRUCTURADA CON ENLACES CONFIGURADOS Y TEXTOS IMPRESOS -->
         <section class="contact-section" id="contacto">
-            <h2 class="section-title">Contacto Directo</h2>
+            <h2 class="section-title">Canales de Contacto Directo</h2>
             <div class="contact-info">
                 <p>¿Tienes un proyecto en mente o una máquina detenida por falta de repuestos?</p>
-                <p>Comunícate directamente con nuestros ingenieros en Juan Díaz, Ciudad de Panamá.</p>
-            </div>
-
-            <!-- TU TELÉFONO VISIBLE -->
-            <div class="phone-display">
-                📞 Celular Comercial: <span>+507 6490-9693</span>
+                <p>Escríbenos directamente o copia nuestros datos comerciales de soporte sin intermediarios.</p>
             </div>
 
             <div class="social-grid">
-                <!-- ENLACES ABSOLUTOS REFORZADOS DE SEGURIDAD NATIVA DE RED -->
-                <a href="wa.me" target="_blank" rel="noopener noreferrer" class="btn-social whatsapp">WhatsApp</a>
-                <a href="instagram.com" target="_blank" rel="noopener noreferrer" class="btn-social instagram">Instagram</a>
-                <a href="mailto:nafcelectronics@gmail.com" class="btn-social gmail">Correo</a>
+                
+                <!-- WHATSAPP CON OPCIÓN DE CLIC REPARADA Y NÚMERO ESCRITO ABAJO -->
+                <div class="social-item">
+                    <a href="wa.me" target="_blank" rel="noopener noreferrer" class="btn-social whatsapp">WhatsApp</a>
+                    <div class="contact-text">6490-9693</div>
+                </div>
+
+                <!-- INSTAGRAM CON OPCIÓN DE CLIC REPARADA Y USUARIO ESCRITO ABAJO -->
+                <div class="social-item">
+                    <a href="instagram.com" target="_blank" rel="noopener noreferrer" class="btn-social instagram">Instagram</a>
+                    <div class="contact-text">@nafcelectronics</div>
+                </div>
+
+                <!-- CORREO CON OPCIÓN DE CLIC Y DIRECCIÓN ESCRITA ABAJO -->
+                <div class="social-item">
+                    <a href="mailto:nafcelectronics@gmail.com" class="btn-social gmail">Correo</a>
+                    <div class="contact-text">nafcelectronics@gmail.com</div>
+                </div>
+
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 NAFC Electronics. Todos los derechos reservados.</p>
+        <p>&copy; 2026 NAFC Electronics. Todos los derechos reservados. | Juan Díaz, Ciudad de Panamá</p>
     </footer>
 
 </body>
