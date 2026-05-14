@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAFC Electronics | Ingeniería Electrónica a la Medida</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --blue-electric: #0284c7;
+            --blue-hover: #0369a1;
+            --text-light: #f8fafc;
+            --text-gray: #94a3b8;
+            --whatsapp-color: #25d366;
+            --instagram-color: #e1306c;
+            --gmail-color: #ea4335;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid #334155;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .brand-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: var(--text-light);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-gray);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--blue-electric);
+        }
+
+        .hero {
+            max-width: 1000px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .hero h1 span {
+            color: var(--blue-electric);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--blue-electric);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .services {
+            max-width: 1200px;
+            margin: 0 auto 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--blue-electric);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #0f172a;
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .card h3 {
+            color: var(--blue-electric);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .differentiation {
+            background-color: #1e293b;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .diff-box {
+            max-width: 800px;
+            margin: 2rem auto 0 auto;
+            border-left: 4px solid var(--blue-electric);
+            padding: 1rem 2rem;
+            background-color: #0f172a;
+            text-align: left;
+        }
+
+        .diff-box h3 {
+            color: var(--blue-electric);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .contact-section {
+            max-width: 800px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 3rem;
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.8rem;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn-social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1rem;
+            transition: opacity 0.3s, transform 0.2s;
+        }
+
+        .btn-social:active {
+            transform: scale(0.98);
+        }
+
+        .btn-social:hover {
+            opacity: 0.9;
+        }
+
+        .whatsapp { background-color: var(--whatsapp-color); }
+        .instagram { background-color: var(--instagram-color); }
+        .gmail { background-color: var(--gmail-color); }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+            background-color: #0f172a;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <!-- LOGO: FOTO 1 -->
+            <img src="foto1.png" alt="NAFC Electronics Logo" class="logo-img">
+            <span class="brand-name">NAFC ELECTRONICS</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#diferencia">Diferencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <h1>No creamos soluciones genéricas;<br><span>desarrollamos la electrónica exacta.</span></h1>
+            <p>Transformamos ideas complejas en hardware real, robusto y eficiente. Somos una empresa emergente de ingeniería electrónica especializada en el diseño, prototipado y fabricación de placas de circuito impreso (PCB) a la medida para la pequeña y mediana industria.</p>
+        </section>
+
+        <section class="services" id="servicios">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                
+                <!-- TARJETA 1 (FOTO 2) -->
+                <div class="card">
+                    <img src="foto2.png" alt="Automatización Industrial" class="card-img">
+                    <div class="card-content">
+                        <h3>Diseño y Fabricación Integral</h3>
+                        <p>De la idea a la placa. Automatizamos desde una máquina hasta líneas de producción completas a pequeña escala. Diseñamos hardware para el control de motores industriales con sus respectivas etapas de potencia.</p>
+                    </div>
+                </div>
+
+                <!-- TARJETA 2 (FOTO 3) -->
+                <div class="card">
+                    <img src="foto3.png" alt="Clonación y Rediseño de Hardware" class="card-img">
+                    <div class="card-content">
+                        <h3>Clonación y Rediseño de Hardware</h3>
+                        <p>Reperfilamiento de circuitos obsoletos o dañados. Si tienes una placa que ya no se fabrica, extraemos el esquema original y la fabricamos desde cero usando componentes modernos.</p>
+                    </div>
+                </div>
+
+                <!-- TARJETA 3 (FOTO 4) -->
+                <div class="card">
+                    <img src="foto4.png" alt="Prototipado PCB" class="card-img">
+                    <div class="card-content">
+                        <h3>Desarrollo de Prototipos Rápidos</h3>
+                        <p>Placas de prueba listas para validación de mercado. Diseñamos PCB optimizados minimizando ruidos electromagnéticos y asegurando un ensamblaje industrial limpio.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="differentiation" id="diferencia">
+            <h2 class="section-title">Nuestra Diferencia</h2>
+            <div class="diff-box">
+                <h3>Ingeniería Con Sentido Comercial</h3>
+                <p>No solo soldamos componentes. Entendemos el costo operativo y de producción de tu negocio para entregarte un producto que sea económicamente viable y fácil de reparar en el futuro.</p>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contacto">
+            <h2 class="section-title">Contacto Directo</h2>
+            <div class="contact-info">
+                <p>¿Tienes un proyecto en mente o una máquina detenida por falta de repuestos?</p>
+                <p>Escríbenos directamente para cotizar tu desarrollo electrónico sin intermediarios.</p>
+            </div>
+            <div class="social-grid">
+                <!-- RUTAS WEB ABSOLUTAS CORREGIDAS -->
+                <a href="wa.me" target="_blank" class="btn-social whatsapp">WhatsApp</a>
+                <a href="instagram.com" target="_blank" class="btn-social instagram">Instagram</a>
+                <a href="mailto:nafcelectronics@gmail.com" class="btn-social gmail">Correo</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NAFC Electronics. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
